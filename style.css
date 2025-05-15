@@ -5,10 +5,9 @@ body, html {
 }
 
 .login-container {
-    background-image: url('https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Substitua pelo caminho da sua imagem */
+    background-image: url(/img/campNou.jpg); /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
-
     position: relative;
     height: 100%;
     display: flex;
@@ -29,7 +28,8 @@ body, html {
 .login-form {
     position: relative;
     padding: 40px;
-    background: white;
+    background: rgb(14, 13, 13);
+    opacity: 0.9; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 2; /* Garante que o formulário fique acima do pseudo-elemento ::before */
@@ -38,16 +38,35 @@ body, html {
 .login-form h2 {
     margin-bottom: 20px;
     text-align: center;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 0 4px 6px rgba(59, 128, 255, 0.2);
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.login-form h2:hover {
+    color:#0056b3
+}
+.login-form h2::after {
+    content: '';
+    display: block;
+    width: 55px;
+    height: 5px;
+    background: #007BFF;
+    margin: 2px auto;
 }
 
 .login-form input {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
+    margin: 10px 1px;
+    border: 1px solid #28209b;
     border-radius: 5px;
     box-sizing: border-box; /* Garante que padding não aumente o tamanho do input */
+}
+.login-form input:focus {
+    border-color: #fd4d4d;
+    outline: none;
 }
 
 .login-form button {
@@ -59,6 +78,7 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 1, 0.3);
 }
 
 .login-form button:hover {
